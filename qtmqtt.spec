@@ -10,7 +10,6 @@ URL:            https://github.com/qt/qtmqtt
 Source0:        qtmqtt-6.6.0.tar.gz
 
 BuildRequires:  cmake >= 3.16 
-BuildRequires:  qt6-qtwebsockets
 BuildRequires:  cmake-filesystem
 
 %description
