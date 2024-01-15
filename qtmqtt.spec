@@ -10,7 +10,10 @@ URL:            https://github.com/qt/qtmqtt
 Source0:        qtmqtt-6.6.0.tar.gz
 
 BuildRequires:  cmake >= 3.16 
-BuildRequires:  cmake-filesystem
+BuildRequires:  gcc-c++
+BuildRequires:  ninja-build
+BuildRequires:  qt6-qtbase-devel
+BuildRequires:  qt6-rpm-macros
 
 %description
 QtMqtt module
@@ -33,14 +36,17 @@ QtMqtt module
 %{_qt6_libdir}/libQt6Mqtt.prl
 %{_qt6_libdir}/libQt6Mqtt.so
 %{_qt6_libdir}/libQt6Mqtt.so.6
-%{_qt6_libdir}/libQt6Mqtt.so.6.6.0
+%{_qt6_libdir}/libQt6Mqtt.so.6.*
 %{_qt6_libdir}/pkgconfig/Qt6Mqtt.pc
 %{_includedir}/qt6
 %{_qt6_examplesdir}
 %{_qt6_archdatadir}/mkspecs/modules/*.pri
 %{_qt6_libdir}/qt6/modules/*.json
 %{_qt6_libdir}/qt6/metatypes/qt6*_metatypes.json
+%dir %{_qt6_libdir}/cmake/Qt6Mqtt/
 
 %changelog
+* Sun Jan 14 2024 Dana Elfassy <delfassy@redhat.com>
+- Mqtt added BuildRequires and files
 * Thu Jan 11 2024 Dana Elfassy <delfassy@redhat.com>
 - Mqtt initial release
