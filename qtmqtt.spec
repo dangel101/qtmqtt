@@ -14,6 +14,8 @@ BuildRequires:  gcc-c++
 BuildRequires:  ninja-build
 BuildRequires:  qt6-qtbase-devel
 BuildRequires:  qt6-rpm-macros
+BuildRequires:  qt6-qtdeclarative-devel
+BuildRequires:  qt6-qtbase-private-devel
 
 %description
 QtMqtt module
@@ -46,6 +48,8 @@ QtMqtt module
 %dir %{_qt6_libdir}/cmake/Qt6Mqtt/
 
 %changelog
+* Tue Jan 16 2024 Dana Elfassy <delfassy@redhat.com>
+- Mqtt added BuildRequires and split to subpackages
 * Sun Jan 14 2024 Dana Elfassy <delfassy@redhat.com>
 - Mqtt added BuildRequires and files
 * Thu Jan 11 2024 Dana Elfassy <delfassy@redhat.com>
