@@ -20,6 +20,11 @@ BuildRequires:  qt6-qtbase-private-devel
 %description
 QtMqtt module
 
+%package -n %{qt_module}-devel
+Summary: qt6-qtmqtt-devel subpackage
+Group: %{qt_module}-devel
+%description -n %{qt_module}-devel
+
 %prep
 %autosetup
 
@@ -33,12 +38,13 @@ QtMqtt module
 %files
 %license LICENSES/*
 %doc tests/README.txt
+%{_qt6_libdir}/libQt6Mqtt.so.6*
+
+%files -n %{qt_module}-devel
 %{_qt6_libdir}/cmake/Qt6BuildInternals/StandaloneTests/QtMqttTestsConfig.cmake
 %{_qt6_libdir}/cmake/Qt6Mqtt/*.cmake
 %{_qt6_libdir}/libQt6Mqtt.prl
 %{_qt6_libdir}/libQt6Mqtt.so
-%{_qt6_libdir}/libQt6Mqtt.so.6
-%{_qt6_libdir}/libQt6Mqtt.so.6.*
 %{_qt6_libdir}/pkgconfig/Qt6Mqtt.pc
 %{_includedir}/qt6
 %{_qt6_archdatadir}/mkspecs/modules/*.pri
@@ -46,7 +52,10 @@ QtMqtt module
 %{_qt6_libdir}/qt6/metatypes/qt6*_metatypes.json
 %dir %{_qt6_libdir}/cmake/Qt6Mqtt/
 
+
 %changelog
+* Tue Jan 16 2024 Dana Elfassy <delfassy@redhat.com>
+- split to -devel subpackage (examples disables)
 * Tue Jan 16 2024 Dana Elfassy <delfassy@redhat.com>
 - Disable examples
 * Tue Jan 16 2024 Dana Elfassy <delfassy@redhat.com>
