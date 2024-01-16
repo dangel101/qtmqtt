@@ -24,11 +24,15 @@ QtMqtt module
 Summary: qt6-qtmqtt-devel subpackage
 %description devel
 
+%package examples
+Summary: qt6-qtmqtt-examples subpackage
+%description examples
+
 %prep
 %autosetup
 
 %build
-%cmake_qt6 -DQT_BUILD_EXAMPLES:BOOL=OFF
+%cmake
 %cmake_build
 
 %install
@@ -51,8 +55,12 @@ Summary: qt6-qtmqtt-devel subpackage
 %{_qt6_libdir}/qt6/metatypes/qt6*_metatypes.json
 %dir %{_qt6_libdir}/cmake/Qt6Mqtt/
 
+%files examples
+%{_qt6_examplesdir}
 
 %changelog
+* Tue Jan 16 2024 Dana Elfassy <delfassy@redhat.com>
+- split to examples subpackage
 * Tue Jan 16 2024 Dana Elfassy <delfassy@redhat.com>
 - fixed devel package name
 * Tue Jan 16 2024 Dana Elfassy <delfassy@redhat.com>
