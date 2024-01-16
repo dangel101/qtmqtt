@@ -20,10 +20,9 @@ BuildRequires:  qt6-qtbase-private-devel
 %description
 QtMqtt module
 
-%package -n %{qt_module}-devel
+%package devel
 Summary: qt6-qtmqtt-devel subpackage
-Group: %{qt_module}-devel
-%description -n %{qt_module}-devel
+%description devel
 
 %prep
 %autosetup
@@ -40,7 +39,7 @@ Group: %{qt_module}-devel
 %doc tests/README.txt
 %{_qt6_libdir}/libQt6Mqtt.so.6*
 
-%files -n %{qt_module}-devel
+%files devel
 %{_qt6_libdir}/cmake/Qt6BuildInternals/StandaloneTests/QtMqttTestsConfig.cmake
 %{_qt6_libdir}/cmake/Qt6Mqtt/*.cmake
 %{_qt6_libdir}/libQt6Mqtt.prl
@@ -54,6 +53,8 @@ Group: %{qt_module}-devel
 
 
 %changelog
+* Tue Jan 16 2024 Dana Elfassy <delfassy@redhat.com>
+- fixed devel package name
 * Tue Jan 16 2024 Dana Elfassy <delfassy@redhat.com>
 - split to -devel subpackage (examples disables)
 * Tue Jan 16 2024 Dana Elfassy <delfassy@redhat.com>
