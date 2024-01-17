@@ -49,11 +49,12 @@ Summary: qt6-qtmqtt-examples subpackage
 %{_qt6_libdir}/libQt6Mqtt.prl
 %{_qt6_libdir}/libQt6Mqtt.so
 %{_qt6_libdir}/pkgconfig/Qt6Mqtt.pc
-%{_includedir}/qt6
 %{_qt6_archdatadir}/mkspecs/modules/*.pri
+%{_qt6_headerdir}/QtMqtt/*
 %{_qt6_libdir}/qt6/modules/*.json
 %{_qt6_libdir}/qt6/metatypes/qt6*_metatypes.json
 %dir %{_qt6_libdir}/cmake/Qt6Mqtt/
+%dir %{_qt6_headerdir}/QtMqtt
 
 %files examples
 %{_qt6_examplesdir}
