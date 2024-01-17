@@ -35,7 +35,7 @@ Summary: Programming examples for %{name}
 %autosetup
 
 %build
-%cmake
+%cmake_qt6
 %cmake_build
 
 %install
@@ -62,6 +62,8 @@ Summary: Programming examples for %{name}
 %{_qt6_examplesdir}
 
 %changelog
+* Wed Jan 17 2024 Dana Elfassy <delfassy@redhat.com>
+- updated to cmake_qt6
 * Wed Jan 17 2024 Dana Elfassy <delfassy@redhat.com>
 - edit subpackages description and summary, files and buildrequires condition
 * Tue Jan 16 2024 Dana Elfassy <delfassy@redhat.com>
