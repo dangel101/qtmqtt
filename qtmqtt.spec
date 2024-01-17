@@ -16,17 +16,20 @@ BuildRequires:  qt6-qtbase-devel
 BuildRequires:  qt6-rpm-macros
 BuildRequires:  qt6-qtdeclarative-devel
 BuildRequires:  qt6-qtbase-private-devel
+%{?_qt6:Requires: %{_qt6}%{?_isa} = %{_qt6_version}}
 
 %description
 QtMqtt module
 
 %package devel
-Summary: qt6-qtmqtt-devel subpackage
+Summary: Development files for %{name}
 %description devel
+%{summary}
 
 %package examples
-Summary: qt6-qtmqtt-examples subpackage
+Summary: Programming examples for %{name}
 %description examples
+%{summary}
 
 %prep
 %autosetup
@@ -40,7 +43,6 @@ Summary: qt6-qtmqtt-examples subpackage
 
 %files
 %license LICENSES/*
-%doc tests/README.txt
 %{_qt6_libdir}/libQt6Mqtt.so.6*
 
 %files devel
@@ -60,6 +62,8 @@ Summary: qt6-qtmqtt-examples subpackage
 %{_qt6_examplesdir}
 
 %changelog
+* Wed Jan 17 2024 Dana Elfassy <delfassy@redhat.com>
+- edit subpackages description and summary, files and buildrequires condition
 * Tue Jan 16 2024 Dana Elfassy <delfassy@redhat.com>
 - split to examples subpackage
 * Tue Jan 16 2024 Dana Elfassy <delfassy@redhat.com>
