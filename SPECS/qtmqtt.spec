@@ -9,7 +9,7 @@ License:        GPL-3.0-only WITH Qt-GPL-exception-1.0
 URL:            https://github.com/qt/qtmqtt
 Source0:        qtmqtt-6.6.0.tar.gz
 
-BuildRequires:  cmake >= 3.16 
+BuildRequires:  cmake >= 3.16
 BuildRequires:  gcc-c++
 BuildRequires:  ninja-build
 BuildRequires:  qt6-qtbase-devel
@@ -62,21 +62,5 @@ Summary: Programming examples for %{name}
 %{_qt6_examplesdir}
 
 %changelog
-* Wed Jan 17 2024 Dana Elfassy <delfassy@redhat.com>
-- updated to cmake_qt6
-* Wed Jan 17 2024 Dana Elfassy <delfassy@redhat.com>
-- edit subpackages description and summary, files and buildrequires condition
-* Tue Jan 16 2024 Dana Elfassy <delfassy@redhat.com>
-- split to examples subpackage
-* Tue Jan 16 2024 Dana Elfassy <delfassy@redhat.com>
-- fixed devel package name
-* Tue Jan 16 2024 Dana Elfassy <delfassy@redhat.com>
-- split to -devel subpackage (examples disables)
-* Tue Jan 16 2024 Dana Elfassy <delfassy@redhat.com>
-- Disable examples
-* Tue Jan 16 2024 Dana Elfassy <delfassy@redhat.com>
-- Mqtt added BuildRequires and files #2
-* Sun Jan 14 2024 Dana Elfassy <delfassy@redhat.com>
-- Mqtt added BuildRequires and files
-* Thu Jan 11 2024 Dana Elfassy <delfassy@redhat.com>
-- Mqtt initial release
+* Thu Feb 08 2024 Dana Elfassy <delfassy@redhat.com>
+- QtMqtt initial release
