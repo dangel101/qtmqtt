@@ -18,8 +18,11 @@ BuildRequires:  qt6-qtbase-private-devel
 %{?_qt6:Requires: %{_qt6}%{?_isa} = %{_qt6_version}}
 
 %description
-MQTT is a machine-to-machine (M2M) protocol utilizing the publish-and-subscribe paradigm, and provides a channel with minimal communication overhead.
-The Qt MQTT module provides a standard compliant implementation of the MQTT protocol specification. It enables applications to act as telemetry displays and devices to publish telemetry data.
+MQTT is a machine-to-machine (M2M) protocol utilizing the publish-and-subscribe
+paradigm, and provides a channel with minimal communication overhead.
+The Qt MQTT module provides a standard compliant implementation of the MQTT 
+protocol specification. It enables applications to act as telemetry displays 
+and devices to publish telemetry data.
 
 %package devel
 Summary: Development files for %{name}
